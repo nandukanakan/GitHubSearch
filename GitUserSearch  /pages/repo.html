@@ -1,0 +1,21 @@
+<div ng-controller="repoController" data-ng-init="userRepoInfo()" class="bar">
+    <div class="panel  panel-default">
+        <div class="panel-body">
+            <div class="list-group">
+                <div ng-repeat="repo in repoData" >
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h4>
+                                <ul>
+                                    <li><a href="{{repo.html_url}}" target="_blank" >{{repo.name}}</a></li>
+                              <small>{{repo.description}}</small>
+                                </ul>
+                                  
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div  ng-controller="homeController"  ng-repeat="ulogin in userData">
+    <div class="row">
+        <div class="col-md-8">
+            <h4>
+               <a><img class="inner-circle"  ng-src="{{ulogin.avatar_url}}"/></a>
+               <a ng-click="saveUser(ulogin.login)" ui-sref="repo"  >{{ulogin.login}} </a>
+            </h4>
+        </div>
+    </div>
+</div>

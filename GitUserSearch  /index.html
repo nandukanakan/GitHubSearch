@@ -1,0 +1,31 @@
+<html lang="en" ng-app="app" >
+    <head>
+        <meta charset="utf-8">
+        <title>Github user search</title>
+        <script src="bower_components/angular/angular.js"></script>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers/homeController.js"></script>
+        <script type="text/javascript" src="js/services/getUser.js"></script>
+        <script type="text/javascript" src="js/controllers/repoController.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body ng-controller="homeController">
+<!--        <a href="index.html" class="headName" font-size="8px">Home</a>-->
+        <h3 class="headName">GitHub User Search</h3>
+        <div class="bar">
+            <form ng-submit="userName(userSearch)">
+                <input type="text" class="search" ng-model="userSearch" placeholder="Enter Git Hub User name" />
+                <button type="button" ng-click="userName(userSearch)" ui-sref="home" class="btn btn-info active">Search</button>
+            </form>
+            <div class="panel  panel-default">
+                <div class="panel-body">
+                    <div class="list-group">
+                    <div ui-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
